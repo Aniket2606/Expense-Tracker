@@ -4,7 +4,7 @@ import avatar from '../img/avatar.png'
 import { signout } from '../utils/Icons'
 import { menuItems } from '../utils/menuItems'
 
-export default function Navigation() {
+export default function Navigation({active, setActive}) {
   return (
     <NavStyled>
             <div className="user-con">
@@ -18,7 +18,8 @@ export default function Navigation() {
                 {menuItems.map((item) => {
                     return <li
                         key={item.id}
-
+                        onClick = {() => setActive(item.id)}
+                        className={active === item.id ? 'active':''}
                     >
                         {item.icon}
                         <span>{item.title}</span>
@@ -64,12 +65,16 @@ const NavStyled = styled.nav`
             padding: .2rem;
             box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
         }
-        h2{
-            color: rgba(34, 34, 96, 1);
-        }
+       
         p{
-            color: rgba(34, 34, 96, .6);
+            color: rgba(34, 34, 96, .6) ;
         }
+    }
+
+    .bottom-nav{
+        color: black;
+        cursor: pointer;
+
     }
 
     .menu-items{
@@ -84,11 +89,11 @@ const NavStyled = styled.nav`
             font-weight: 500;
             cursor: pointer;
             transition: all .4s ease-in-out;
-            color: rgba(34, 34, 96, .6);
+            color: white;
             padding-left: 1rem;
             position: relative;
             i{
-                color: rgba(34, 34, 96, 0.6);
+                color: black;
                 font-size: 1.4rem;
                 transition: all .4s ease-in-out;
             }
