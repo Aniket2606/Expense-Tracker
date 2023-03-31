@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { useGlobalContext } from '../context/globalContext';
 import { InnerLayout } from '../styles/Layouts';
+import { rupee } from '../utils/Icons';
 import Form from './Form';
 import IncomeItem from './IncomeItem';
+
 
 function Income() {
     const {addIncome,incomes, getIncomes, deleteIncome, totalIncome} = useGlobalContext()
@@ -15,7 +17,7 @@ function Income() {
         <IncomeStyled>
             <InnerLayout>
                 <h1>Incomes</h1>
-                <h2 className="total-income">Total Income: <span>${totalIncome()}</span></h2>
+                <h2 className="total-income">Total Income:<span> {rupee} {totalIncome()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">
                         <Form />
@@ -71,6 +73,7 @@ const IncomeStyled = styled.div`
             flex: 1;
         }
     }
+
 `;
 
 export default Income

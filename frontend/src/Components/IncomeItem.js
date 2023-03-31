@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { dateFormat } from '../utils/dateFormat';
-import { rupee, bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../utils/Icons';
+import { rupee, bitcoin, book, calender, card, circle, clothing, comment, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../utils/Icons';
 import Button from './Button';
 
 function IncomeItem({
@@ -67,7 +67,8 @@ function IncomeItem({
     return (
         <IncomeItemStyled indicator={indicatorColor}>
             <div className="icon">
-                {type === 'expense' ? expenseCatIcon() : categoryIcon()}
+                {type === 'expense' ? expenseCatIcon() : categoryIcon()} 
+                 {/* type refers to income model in backend */}
             </div>
             <div className="content">
                 <h5>{title}</h5>
@@ -97,7 +98,7 @@ function IncomeItem({
         </IncomeItemStyled>
     )
 }
-
+ 
 const IncomeItemStyled = styled.div`
     background: #FCF6F9;
     border: 2px solid #FFFFFF;
