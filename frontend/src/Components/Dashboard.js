@@ -48,7 +48,7 @@ function Dashboard() {
                       {/* Transaction history */}
                         <History />
 
-                        <h2 className="salary-title">Min <span>Salary</span>Max</h2>
+                        <h2 className="salary-title">Min <span>Income</span>Max</h2>
                         <div className="salary-item">
                             <p>
                                 {rupee}{Math.min(...incomes.map(item => item.amount))}
