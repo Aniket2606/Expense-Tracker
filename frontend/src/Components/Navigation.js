@@ -7,6 +7,7 @@ import { menuItems } from '../utils/menuItems'
 export default function Navigation({active, setActive}) {
   return (
     <NavStyled>
+            
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
@@ -29,8 +30,9 @@ export default function Navigation({active, setActive}) {
 
             </ul>
             <div className="bottom-nav">
-                <li>
-                    {signout} Sign Out
+                <li onClick = {() => alert("Not Available!")}>
+                    {signout}
+                    <span style = {{color:'white'}}> &nbsp; Sign out</span>
                 </li>
             </div>
 
@@ -39,8 +41,9 @@ export default function Navigation({active, setActive}) {
 }
 
 const NavStyled = styled.nav`
-    padding: 2rem 1.5rem;      
-    width: 374px;
+    
+    padding: .5rem 1.5rem;      
+    width: 25%;
     height: 100%;
     background: #95bdff;
     border: 3px solid #537fe7;

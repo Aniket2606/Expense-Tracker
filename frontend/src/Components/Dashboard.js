@@ -6,6 +6,7 @@ import { InnerLayout } from '../styles/Layouts';
 import { rupee } from '../utils/Icons';
 import Chart from './Chart';
 
+
 function Dashboard() {
     const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
 
@@ -17,12 +18,14 @@ function Dashboard() {
     return (
         <DashboardStyled>
             <InnerLayout>
-                <h1>All Transactions</h1>
+                <h1 style = {{color: 'white'}}>Dashboard</h1> <br></br>
                 <div className="stats-con">
                     <div className="chart-con">
-
+                       
+                        <div>  
                         <Chart />
-
+                        </div>
+                         {/* div for maintaining chart size with grid */}
                         <div className="amount-con">
                             <div className="income">
                                 <h2>Total Income</h2>
@@ -48,7 +51,7 @@ function Dashboard() {
                       {/* Transaction history */}
                         <History />
 
-                        <h2 className="salary-title">Min <span>Income</span>Max</h2>
+                        <h2 className="salary-title" >Min <span>Income</span>Max</h2>
                         <div className="salary-item">
                             <p>
                                 {rupee}{Math.min(...incomes.map(item => item.amount))}
@@ -90,6 +93,7 @@ const DashboardStyled = styled.div`
                     grid-column: span 2;
                 }
                 .income, .expense, .balance{
+                    height : 90%;
                     background: #FCF6F9;
                     border: 2px solid #FFFFFF;
                     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
@@ -103,6 +107,7 @@ const DashboardStyled = styled.div`
 
                 .balance{
                     grid-column: 2 / 4;
+                    height : 85%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -125,9 +130,11 @@ const DashboardStyled = styled.div`
                 justify-content: space-between;
             }
             .salary-title{
+                color: black;
                 font-size: 1.2rem;
                 span{
                     font-size: 1.8rem;
+                    color: white;
                 }
             }
             .salary-item{

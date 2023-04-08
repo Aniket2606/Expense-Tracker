@@ -6,6 +6,7 @@ import { MainLayout } from "./styles/Layouts";
 import Dashboard from './Components/Dashboard';
 import Income from './Components/Income';
 import Expenses from './Components/Expenses';
+import Transview from './Components/Transview';
 import { useGlobalContext } from './context/globalContext';
 
 
@@ -20,7 +21,7 @@ function App() {
       case 1:
         return <Dashboard />
       case 2:
-        return <Dashboard />
+        return <Transview />
       case 3:
         return <Income />
       case 4: 
