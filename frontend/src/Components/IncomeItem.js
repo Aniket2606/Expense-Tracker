@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { dateFormat } from '../utils/dateFormat';
-import { rupee, bitcoin, book, calender, card, circle, clothing, comment, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../utils/Icons';
+import { rupee, crypto, book, calender, card, circle, clothing, comment, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../utils/Icons';
 import Button from './Button';
 
 function IncomeItem({
@@ -26,8 +26,8 @@ function IncomeItem({
                 return stocks;
             case 'stocks':
                 return users;
-            case 'bitcoin':
-                return bitcoin;
+            case 'crypto':
+                return crypto;
             case 'bank':
                 return card;
             case 'youtube':

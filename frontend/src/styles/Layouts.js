@@ -8,6 +8,7 @@ export const MainLayout = styled.div`
 `;
 
 export const InnerLayout = styled.div`
-    padding: 2rem 1.5rem;
-    width: 100%;
+    padding: 1rem 1.5rem;
+    width: 100%;  
 `;
+

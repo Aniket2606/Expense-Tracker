@@ -18,7 +18,7 @@ function Dashboard() {
     return (
         <DashboardStyled>
             <InnerLayout>
-                <h1 style = {{color: 'white'}}>Dashboard</h1> <br></br>
+                <h1>Dashboard</h1> 
                 <div className="stats-con">
                     <div className="chart-con">
                        
@@ -40,7 +40,7 @@ function Dashboard() {
                                 </p>
                             </div>
                             <div className="balance">
-                                <h2>Total Balance</h2>
+                                <h1>Total Balance</h1>
                                 <p>
                                     {rupee} {totalBalance()}
                                 </p>
@@ -87,7 +87,7 @@ const DashboardStyled = styled.div`
             .amount-con{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
+                gap: 0.5rem 2rem;
                 margin-top: 2rem;
                 .income, .expense{
                     grid-column: span 2;
@@ -95,10 +95,13 @@ const DashboardStyled = styled.div`
                 .income, .expense, .balance{
                     height : 90%;
                     background: #FCF6F9;
-                    border: 2px solid #FFFFFF;
+                    border: 6px solid black;
                     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
                     border-radius: 20px;
                     padding: 1rem;
+                    h1,h2{
+                        color: rgba(34, 34, 96, .7) 
+                    }
                     p{
                         font-size: 3.5rem;
                         font-weight: 700;
@@ -106,6 +109,7 @@ const DashboardStyled = styled.div`
                 }
 
                 .balance{
+                    border: 8px solid black;
                     grid-column: 2 / 4;
                     height : 85%;
                     display: flex;
@@ -114,7 +118,7 @@ const DashboardStyled = styled.div`
                     align-items: center;
                     p{
                         color: var(--color-green);
-                        opacity: 0.6;
+                        
                         font-size: 4.5rem;
                     }
                 }
@@ -139,7 +143,7 @@ const DashboardStyled = styled.div`
             }
             .salary-item{
                 background: #FCF6F9;
-                border: 2px solid #FFFFFF;
+                border: 4px solid black;
                 box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
                 padding: 1rem;
                 border-radius: 20px;
@@ -149,6 +153,7 @@ const DashboardStyled = styled.div`
                 p{
                     font-weight: 600;
                     font-size: 1.6rem;
+                    color: rgba(34, 34, 96, .6) 
                 }
             }
         }

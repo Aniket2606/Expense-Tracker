@@ -11,7 +11,7 @@ export default function Navigation({active, setActive}) {
             <div className="user-con">
                 <img src={avatar} alt="" />
                 <div className="text">
-                    <h2>Aniket</h2>
+                    <h2 style = {{color: 'black'}}>Aniket</h2>
                     <p>Student</p>
                 </div>
             </div>
@@ -32,7 +32,7 @@ export default function Navigation({active, setActive}) {
             <div className="bottom-nav">
                 <li onClick = {() => alert("Not Available!")}>
                     {signout}
-                    <span style = {{color:'white'}}> &nbsp; Sign out</span>
+                    <span> &nbsp; Sign out</span>
                 </li>
             </div>
 
@@ -41,12 +41,11 @@ export default function Navigation({active, setActive}) {
 }
 
 const NavStyled = styled.nav`
-    
-    padding: .5rem 1.5rem;      
+    padding: 1rem 1.5rem;      
     width: 25%;
     height: 100%;
-    background: #95bdff;
-    border: 3px solid #537fe7;
+    background:#FDAFA5;
+    border: 4px solid black;
     backdrop-filter: blur(4.5px);
     border-radius: 32px;
     display: flex;
@@ -64,19 +63,20 @@ const NavStyled = styled.nav`
             border-radius: 50%;
             object-fit: cover;
             background: #fcf6f9;
-            border: 2px solid #FFFFFF;
+            border: 2px solid black;
             padding: .2rem;
             box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.06);
         }
        
         p{
-            color: rgba(34, 34, 96, .6) ;
+            color: rgba(34, 34, 96, .8) ;
         }
     }
 
     .bottom-nav{
         color: black;
         cursor: pointer;
+        margin: .6rem;
 
     }
 
@@ -92,7 +92,6 @@ const NavStyled = styled.nav`
             font-weight: 500;
             cursor: pointer;
             transition: all .4s ease-in-out;
-            color: white;
             padding-left: 1rem;
             position: relative;
             i{

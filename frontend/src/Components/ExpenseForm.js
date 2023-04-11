@@ -115,7 +115,7 @@ const ExpenseFormStyled = styled.form`
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
         color: black;
         &::placeholder{
-            color: #f2f2f2;
+            color: rgba(34, 34, 96, .6);
         }
     }
     .input-control{
@@ -128,7 +128,7 @@ const ExpenseFormStyled = styled.form`
         display: flex;
         justify-content: flex-end;
         select{
-            color: #f2f2f2;
+            color:  rgba(34, 34, 96, .6);
             &:focus, &:active{
                 color: rgba(34, 34, 96, 1);
             }

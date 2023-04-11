@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
-import bg from './img/bg.png'
 import Navigation from "./Components/Navigation";
-import { MainLayout } from "./styles/Layouts";
+import { MainLayout}from "./styles/Layouts";
 import Dashboard from './Components/Dashboard';
 import Income from './Components/Income';
 import Expenses from './Components/Expenses';
 import Transview from './Components/Transview';
+import About from './Components/About.js';
 import { useGlobalContext } from './context/globalContext';
 
 
@@ -26,13 +26,17 @@ function App() {
         return <Income />
       case 4: 
         return <Expenses />
+      case 5: 
+        return <About />
       default: 
         return <Dashboard />
     }
   }
 
+
+
   return (
-    <AppStyled bg={bg} className="App">
+    <AppStyled className="App">
       
       <MainLayout>   
         <Navigation active={active} setActive={setActive} />
@@ -46,13 +50,13 @@ function App() {
 
 const AppStyled = styled.div`
    height: 100vh;
-  background-image: url(${props => props.bg});
-  position: relative;
+   background-color: #FEE7E4;
+   position: relative;
   
   main{
     flex: 1;
-    background: #537fe7;
-    border: 3px solid #95bdff;
+    background: #FC8778;
+    border: 4px solid black;
     backdrop-filter: blur(4.5px);
     border-radius: 32px;
     overflow-x: hidden;

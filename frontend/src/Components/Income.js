@@ -16,7 +16,7 @@ function Income() {
     return (
         <IncomeStyled>
             <InnerLayout>
-                <h1 style = {{color: 'white'}}>Incomes</h1>
+                <h1>Incomes</h1>
                 <h2 className="total-income">Total Income:<span> {rupee} {totalIncome()}</span></h2>
                 <div className="income-content">
                     <div className="form-container">

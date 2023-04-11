@@ -4,6 +4,7 @@ import { useGlobalContext } from '../context/globalContext';
 import { dateFormat } from '../utils/dateFormat';
 import { rupee } from '../utils/Icons';
 
+
 function Transview() {
     const {transview} = useGlobalContext()
 
@@ -11,7 +12,7 @@ function Transview() {
 
     return (
         <HistoryStyled>
-            <h2 style = {{color: 'white'}}>All Transactions</h2>
+            <h1>All Transactions</h1>
             {history.map((item) =>{
                 let {_id, title, amount, date, type} = item
                 return (
@@ -49,15 +50,14 @@ const HistoryStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     .history-item{
         background: #FCF6F9;
-        border: 2px solid #FFFFFF;
+        border: 2px solid black;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
         padding: 1rem;
         border-radius: 20px;
         display: flex;
-        
         justify-content: space-between;
         align-items: center;
     }

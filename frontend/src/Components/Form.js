@@ -76,7 +76,7 @@ export default function Form() {
                     <option value="freelancing">Freelancing</option>
                     <option value="investments">Investments</option>
                     <option value="stocks">Stocks</option>
-                    <option value="bitcoin">Bitcoin</option>
+                    <option value="crypto">Crypto</option>
                     <option value="bank">Bank Transfer</option>  
                     <option value="youtube">Youtube</option>  
                     <option value="other">Other</option>  
@@ -117,7 +117,7 @@ const FormStyled = styled.form`
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
         color: black;
         &::placeholder{
-            color:#f2f2f2 ;
+            color: rgba(34, 34, 96, .6) ;
         }
     }
 
@@ -131,7 +131,7 @@ const FormStyled = styled.form`
         display: flex;
         justify-content: flex-end;
         select{
-            color: #f2f2f2;
+            color:  rgba(34, 34, 96, .6);
             &:focus, &:active{
                 color: rgba(34, 34, 96, 1);
             }
