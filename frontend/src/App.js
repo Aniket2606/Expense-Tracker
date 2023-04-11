@@ -1,13 +1,14 @@
 import React, {useState} from 'react'
 import styled from "styled-components";
 import Navigation from "./Components/Navigation";
-import { MainLayout}from "./styles/Layouts";
+import { MainLayout }from "./styles/Layouts";
 import Dashboard from './Components/Dashboard';
 import Income from './Components/Income';
 import Expenses from './Components/Expenses';
 import Transview from './Components/Transview';
 import About from './Components/About.js';
 import { useGlobalContext } from './context/globalContext';
+
 
 
 function App() {
@@ -37,7 +38,6 @@ function App() {
 
   return (
     <AppStyled className="App">
-      
       <MainLayout>   
         <Navigation active={active} setActive={setActive} />
         <main>

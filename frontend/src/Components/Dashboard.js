@@ -111,7 +111,7 @@ const DashboardStyled = styled.div`
                 .balance{
                     border: 8px solid black;
                     grid-column: 2 / 4;
-                    height : 85%;
+                    height : 82%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;

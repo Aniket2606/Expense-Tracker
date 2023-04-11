@@ -28,4 +28,9 @@ export const medical = <i className="fa-solid fa-briefcase-medical"></i>
 export const tv = <i className="fa-solid fa-tv"></i>
 export const circle = <i className="fa-solid fa-circle-dot"></i>
 export const rupee = <i className="fa-solid fa-indian-rupee-sign"></i>
-export const about = <i class="fa-solid fa-envelope"></i>
+export const about = <i className="fa-solid fa-envelope"></i>
+export const mail = <i className="fa-sharp fa-regular fa-envelope"></i>
+export const fb = <i clasNames="social-icon fab fa-facebook-f"></i>
+export const twitter =  <i className="social-icon fab fa-twitter"></i>
+export const ig= <i className="social-icon fab fa-instagram"></i>
+export const google = <i className="social-icon fas fa-envelope"></i>

@@ -3,47 +3,50 @@ import styled from 'styled-components';
 import avatar from '../img/avatar.png'
 import { signout } from '../utils/Icons'
 import { menuItems } from '../utils/menuItems'
+import LogoSection from './LogoSection';
 
 export default function Navigation({active, setActive}) {
-  return (
-    <NavStyled>
-            
-            <div className="user-con">
-                <img src={avatar} alt="" />
-                <div className="text">
-                    <h2 style = {{color: 'black'}}>Aniket</h2>
-                    <p>Student</p>
-                </div>
-            </div>
-            <ul className="menu-items">
-                {menuItems.map((item) => {
-                    return <li
-                        key={item.id}
-                        onClick = {() => setActive(item.id)}
-                        className={active === item.id ? 'active':''}
-                    >
-                        {item.icon}
-                        <span>{item.title}</span>
+  return ( 
+     <>
+     <LogoSection />
+     <NavStyled>
+          <div className="user-con">
+              <img src={avatar} alt="" />
+              <div className="text">
+                  <h2>Aniket</h2>
+                  <p>Student</p>
+              </div>
+          </div>
+          <ul className="menu-items">
+              {menuItems.map((item) => {
+                  return <li
+                      key={item.id}
+                      onClick={() => setActive(item.id)}
+                      className={active === item.id ? 'active' : ''}
+                  >
+                      {item.icon}
+                      <span>{item.title}</span>
 
-                    </li>
-                })}
+                  </li>;
+              })}
 
-            </ul>
-            <div className="bottom-nav">
-                <li onClick = {() => alert("Not Available!")}>
-                    {signout}
-                    <span> &nbsp; Sign out</span>
-                </li>
-            </div>
+          </ul>
+          <div className="bottom-nav">
+              <li onClick={() => alert("Not Available!")}>
+                  {signout}
+                  <span> &nbsp; Sign out</span>
+              </li>
+          </div>
 
-            </NavStyled>
+      </NavStyled></>
   )
 }
 
 const NavStyled = styled.nav`
+    margin-top: 7%;
     padding: 1rem 1.5rem;      
     width: 25%;
-    height: 100%;
+    height: 84.5%;
     background:#FDAFA5;
     border: 4px solid black;
     backdrop-filter: blur(4.5px);
@@ -52,6 +55,30 @@ const NavStyled = styled.nav`
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
+
+    .logo{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+    
+            background: #fcf6f9;
+            border: 2px solid white;
+            padding: .2rem;
+        }
+       
+    }
+
+    .line{
+        border: 2px solid white;
+        width: 100%;
+        position:absolute;
+    }
     .user-con{
         height: 100px;
         display: flex;
@@ -118,4 +145,6 @@ const NavStyled = styled.nav`
             border-radius: 0 10px 10px 0;
         }
     }
+
+
 `;
