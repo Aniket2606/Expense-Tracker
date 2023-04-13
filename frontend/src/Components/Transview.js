@@ -47,6 +47,23 @@ function Transview() {
 }
 
 const HistoryStyled = styled.div`
+    @media (max-width: 1100px){
+        gap: 2.5rem;
+        h1{
+            color: white;
+            text-align: center;
+            font-size: 2.8rem;
+            margin: .6rem 0;;
+        }
+       .history-item{
+        p{
+            font-size: 1.6rem;
+        }
+       }
+
+
+    }
+
     display: flex;
     flex-direction: column;
     gap: 1rem;

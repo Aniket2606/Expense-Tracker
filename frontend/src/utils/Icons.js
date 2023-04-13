@@ -34,3 +34,4 @@ export const fb = <i clasNames="social-icon fab fa-facebook-f"></i>
 export const twitter =  <i className="social-icon fab fa-twitter"></i>
 export const ig= <i className="social-icon fab fa-instagram"></i>
 export const google = <i className="social-icon fas fa-envelope"></i>
+export const arrow = <i class="fa-solid fa-caret-right"></i>

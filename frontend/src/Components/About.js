@@ -8,7 +8,7 @@ function About() {
   return (
   <AboutStyled>
        <InnerLayout>
-                   <h1> About </h1>
+                   <h1 className="abt"> About </h1>
 
                 <div className='brand'>
                   <img src= {about} alt=""/>
@@ -43,6 +43,51 @@ function About() {
 
 
 const AboutStyled = styled.div`
+    @media (max-width: 1100px){
+    .abt{
+         color:white;
+         font-size: 4rem;
+         text-align: center;
+      }
+     .brand{
+      margin: 5rem 5rem;
+     }
+      .title{
+        padding-top: 2rem;
+        h1{
+          font-size: 8.5rem !important;
+        }
+          p{
+            font-size: 2.3rem !important ;
+          }
+        }
+      
+      .description{
+        padding-top: 6% !important;
+        font-size: 2.6rem !important;
+      }
+  
+      .contact{
+        h1{
+          margin-top:2.5rem;
+          font-size: 3.5rem !important;
+        }
+          p,i{
+            padding-top: 1.5% !important;
+            font-size: 2.4rem !important;
+          }
+        }
+
+        footer{
+          padding-top: 4rem !important;
+          font-size: 2rem !important;
+        }
+      }
+    
+
+
+
+
     .brand {
       padding: 1% 2%;
       text-align: center;

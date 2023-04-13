@@ -52,7 +52,13 @@ const AppStyled = styled.div`
    height: 100vh;
    background-color: #FEE7E4;
    position: relative;
-  
+
+   @media (max-width: 1100px){
+    overflow: scroll;
+     main{
+      height: 2200px;
+     }
+   }
   main{
     flex: 1;
     background: #FC8778;
@@ -60,10 +66,10 @@ const AppStyled = styled.div`
     backdrop-filter: blur(4.5px);
     border-radius: 32px;
     overflow-x: hidden;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar{  
       width: 0;
     }
   }
-  
+
 `;
 export default App;

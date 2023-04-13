@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
 import avatar from '../img/avatar.png'
-import { signout } from '../utils/Icons'
 import { menuItems } from '../utils/menuItems'
 import LogoSection from './LogoSection';
 
@@ -24,19 +23,19 @@ export default function Navigation({active, setActive}) {
                       onClick={() => setActive(item.id)}
                       className={active === item.id ? 'active' : ''}
                   >
-                      {item.icon}
-                      <span>{item.title}</span>
+                      <span className="icon"> {item.icon}</span>
+                      <span className="item">{item.title}</span>
 
                   </li>;
               })}
 
           </ul>
-          <div className="bottom-nav">
+          {/* <div className="bottom-nav">
               <li onClick={() => alert("Not Available!")}>
                   {signout}
                   <span> &nbsp; Sign out</span>
               </li>
-          </div>
+          </div> */}
 
       </NavStyled></>
   )
@@ -46,7 +45,7 @@ const NavStyled = styled.nav`
     margin-top: 7%;
     padding: 1rem 1.5rem;      
     width: 25%;
-    height: 84.5%;
+    height: 85%;
     background:#FDAFA5;
     border: 4px solid black;
     backdrop-filter: blur(4.5px);
@@ -56,34 +55,36 @@ const NavStyled = styled.nav`
     justify-content: space-between;
     gap: 2rem;
 
-    .logo{
-        height: 100px;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+    @media (max-width: 1100px) {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        height: 5rem;
+        width: 85%;
         
-        img{
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-    
-            background: #fcf6f9;
-            border: 2px solid white;
-            padding: .2rem;
-        }
-       
     }
 
-    .line{
-        border: 2px solid white;
-        width: 100%;
-        position:absolute;
-    }
     .user-con{
         height: 100px;
         display: flex;
         align-items: center;
         gap: 1rem;
+             
+        @media (max-width: 1100px){
+            display: block;
+            width: 10rem;
+            position: absolute;
+            top: 1.2rem;
+            right: -1rem;
+            
+            h2{
+                font-size: 1.6rem; 
+            }
+            img, p{
+                display: none;
+            }
+
+        }
+
         img{
             width: 80px;
             height: 80px;
@@ -96,21 +97,33 @@ const NavStyled = styled.nav`
         }
        
         p{
-            color: rgba(34, 34, 96, .8) ;
+            color: rgba(34, 34, 96, .8) ; 
         }
     }
 
-    .bottom-nav{
+    ${'' /* .bottom-nav{
         color: black;
         cursor: pointer;
         margin: .6rem;
 
-    }
+    } */}
 
     .menu-items{
         flex: 1;
         display: flex;
         flex-direction: column;
+        width: 75%;
+        @media (max-width: 1100px){ 
+            padding: 0 1rem 0 .5rem;
+            flex-direction: row;
+            justify-content: space-between;
+
+          .item{
+            display: none;
+          }
+        
+        }
+
         li{
             display: grid;
             grid-template-columns: 40px auto;
@@ -143,6 +156,17 @@ const NavStyled = styled.nav`
             height: 100%;
             background: #222260;
             border-radius: 0 10px 10px 0;
+        }
+
+        @media (max-width: 1100px){
+            &::before{
+               top: .5rem;
+               width: .5rem;
+               height: .5rem;
+               border-radius: 50%;
+               
+            }
+
         }
     }
 

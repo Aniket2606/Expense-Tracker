@@ -6,6 +6,10 @@ export const MainLayout = styled.div`
     height: 100%;
     display: flex;
     gap: 1rem;
+
+    @media (max-width: 1100px) {
+        display: block
+    }
 `;
 
 export const InnerLayout = styled.div`

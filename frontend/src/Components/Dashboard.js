@@ -8,7 +8,7 @@ import Chart from './Chart';
 
 
 function Dashboard() {
-    const {totalExpenses,incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
+    const { totalExpenses, incomes, expenses, totalIncome, totalBalance, getIncomes, getExpenses } = useGlobalContext()
 
     useEffect(() => {
         getIncomes()
@@ -18,14 +18,14 @@ function Dashboard() {
     return (
         <DashboardStyled>
             <InnerLayout>
-                <h1>Dashboard</h1> 
+                <h1>Dashboard</h1>
                 <div className="stats-con">
                     <div className="chart-con">
-                       
-                        <div>  
-                        <Chart />
+
+                        <div className="graph">
+                            <Chart />
                         </div>
-                         {/* div for maintaining chart size with grid */}
+                        {/* div for maintaining chart size with grid */}
                         <div className="amount-con">
                             <div className="income">
                                 <h2>Total Income</h2>
@@ -47,8 +47,9 @@ function Dashboard() {
                             </div>
                         </div>
                     </div>
+
                     <div className="history-con">
-                      {/* Transaction history */}
+                        {/* Transaction history */}
                         <History />
 
                         <h2 className="salary-title" >Min <span>Income</span>Max</h2>
@@ -63,10 +64,10 @@ function Dashboard() {
                         <h2 className="salary-title">Min <span>Expense</span>Max</h2>
                         <div className="salary-item">
                             <p>
-                               {rupee}{Math.min(...expenses.map(item => item.amount))}
+                                {rupee}{Math.min(...expenses.map(item => item.amount))}
                             </p>
                             <p>
-                               {rupee}{Math.max(...expenses.map(item => item.amount))}
+                                {rupee}{Math.max(...expenses.map(item => item.amount))}
                             </p>
                         </div>
                     </div>
@@ -77,13 +78,57 @@ function Dashboard() {
 }
 
 const DashboardStyled = styled.div`
+    @media (max-width: 1100px){
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 3rem;
+    }
+     }
+
     .stats-con{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
+
+        @media (max-width: 1100px){
+        grid-template-columns: repeat(2, 1fr) ;
+        padding: 0rem 1.5rem;
         .chart-con{
+            
+            .graph{
+                padding: 1rem 1.5rem;
+                
+            }
+
+            .amount-con{
+               .income, .expense{
+                   text-align: center;
+                   margin: 0 1.5rem !important;
+                h2{
+                    font-size: 25rem;
+                    text-align: center;
+                }}
+
+                .balance{
+                    margin-top: 1rem;
+                    height: 95% !important;
+
+                    @media (max-width: 700px){
+                        p{
+                            font-size: 4.1rem !important;
+                        }
+                    }
+            }
+        }
+      }
+    }
+
+        .chart-con{
+            padding-left: .6rem;
             grid-column: 1 / 4;
             height: 400px;
+
             .amount-con{
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
@@ -100,6 +145,7 @@ const DashboardStyled = styled.div`
                     border-radius: 20px;
                     padding: 1rem;
                     h1,h2{
+                        font-size: 2.1rem;
                         color: rgba(34, 34, 96, .7) 
                     }
                     p{
@@ -126,6 +172,28 @@ const DashboardStyled = styled.div`
         }
 
         .history-con{
+
+            @media (max-width: 1100px){
+             grid-column: 1/4;
+             margin-top: 36rem;
+
+            .salary-title{
+                font-size: 1.8rem ;
+                margin-top: 5rem !important;
+                span{
+                    font-size: 3rem !important;
+                }
+            }
+            .salary-item {
+                p{
+                    font-size: 1.8rem !important ;
+                }
+            
+            }
+
+            }
+
+
             grid-column: 4 / -1;
             h2{
                 margin: 1rem 0;
