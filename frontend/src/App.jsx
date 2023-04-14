@@ -56,7 +56,7 @@ const AppStyled = styled.div`
    @media (max-width: 1100px){
     overflow: scroll;
      main{
-      height: 2250px;
+      height: 2200px;
      }
    }
   main{
