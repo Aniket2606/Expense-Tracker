@@ -54,6 +54,8 @@ const LogStyled = styled.div`
         height: 6.5rem;
       }
     }
+
+    
 `;
 
 export default LogoSection

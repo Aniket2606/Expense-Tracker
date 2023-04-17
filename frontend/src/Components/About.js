@@ -19,10 +19,10 @@ function About() {
                   </div>
 
                   <div className="description">
-                    <p>FinTrackr is a expense manager and spending tracker website that will help us to manage our 
-                    own personal finances with ease. Imagine it as a digital financial notebook in which we can 
-                    track our all income and expenses. It tracks our income and expenses by chart so we can see our budget quickly 
-                    and make suitable financial decisions.</p>
+                    <p>FinTrackr is an expense tracker that helps you to manage your personal finances with ease. 
+                    Imagine it as a digital financial notebook i which you can track all your income and expenses. 
+                    It tracks your income and expenses by chart so that you can see your budget quickly and make suitable financial decisions accordingly.</p>
+
 
                   </div>
 
