@@ -25,6 +25,7 @@ export default function Form() {
 
     const handleSubmit = e => {
         e.preventDefault()
+        // prevents from refreshing page
         addIncome(inputState)
         setInputState({
             title: '',

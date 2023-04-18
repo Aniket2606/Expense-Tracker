@@ -21,6 +21,7 @@ export default function Navigation({active, setActive}) {
                   return <li
                       key={item.id}
                       onClick={() => setActive(item.id)}
+                    // active class for selected option
                       className={active === item.id ? 'active' : ''}
                   >
                       <span className="icon"> {item.icon}</span>
