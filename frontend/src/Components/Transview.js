@@ -52,12 +52,12 @@ const HistoryStyled = styled.div`
         h1{
             color: white;
             text-align: center;
-            font-size: 2.8rem;
+           
             margin: .6rem 0;;
         }
        .history-item{
         p{
-            font-size: 1.6rem;
+            
         }
        }
 
@@ -70,17 +70,13 @@ const HistoryStyled = styled.div`
     padding: 1rem 2rem;
     .history-item{
         background: #FCF6F9;
-        border: 2px solid black;
         box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
         padding: 1rem;
-        border-radius: 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .date{
-        font-size: 1.1rem;
-       
         
     }
 `;

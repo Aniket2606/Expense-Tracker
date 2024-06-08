@@ -88,8 +88,7 @@ function ExpenseForm() {
                     name={'Add Expense'}
                     icon={plus}
                     bPad={'.8rem 1.6rem'}
-                    bRad={'30px'}
-                    bg={'var(--color-accent'}
+                    bg={'rgb(25,109,153)'}
                     color={'#fff'}
                 />
             </div>
@@ -108,7 +107,6 @@ const ExpenseFormStyled = styled.form`
         outline: none;
         border: none;
         padding: .5rem 1rem;
-        border-radius: 5px;
         border: 2px solid #fff;
         background: transparent;
         resize: none;
@@ -139,7 +137,7 @@ const ExpenseFormStyled = styled.form`
         button{
             box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
             &:hover{
-                background: var(--color-green) !important;
+                background: rgb(220,53,69) !important;
             }
         }
     }

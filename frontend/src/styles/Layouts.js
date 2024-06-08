@@ -2,10 +2,9 @@ import styled from "styled-components";
 
 
 export const MainLayout = styled.div`
-    padding: 1rem;
     height: 100%;
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
 
     @media (max-width: 1100px) {
         display: block

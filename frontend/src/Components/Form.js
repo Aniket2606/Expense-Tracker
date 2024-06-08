@@ -91,8 +91,7 @@ export default function Form() {
                <Button name={'Add Income'}
                     icon={plus}
                     bPad={'.8rem 1.6rem'}
-                    bRad={'30px'}
-                    bg={'var(--color-accent'}
+                    bg={'rgb(25,109,153)'}
                     color={'#fff'}
                 />
             </div>
@@ -111,7 +110,6 @@ const FormStyled = styled.form`
         outline: none;
         border: none;
         padding: .5rem 1rem;
-        border-radius: 5px;
         border: 2px solid #fff;
         background: transparent;
         resize: none;

@@ -20,8 +20,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        font-family: 'Nunito', sans-serif;
-        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        font-family: "Montserrat", sans-serif;
+        font-size: clamp(.8rem, 1.2vw, 1rem);
         overflow: hidden;
     }
 

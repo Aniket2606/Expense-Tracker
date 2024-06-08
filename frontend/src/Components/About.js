@@ -45,8 +45,7 @@ function About() {
 const AboutStyled = styled.div`
     @media (max-width: 1100px){
     .abt{
-         color:white;
-         font-size: 4rem;
+         font-size: 3rem;
          text-align: center;
       }
      .brand{
@@ -60,7 +59,7 @@ const AboutStyled = styled.div`
       .title{
         padding-top: 2rem;
         h1{
-          font-size: 8rem !important;
+          font-size: 6rem !important;
         }
           p{
             font-size: 2rem !important ;
@@ -101,7 +100,6 @@ const AboutStyled = styled.div`
         width: 20%
       }
       .title{
-          color: white;
         h1{
           font-size: 4.6rem;
         } 

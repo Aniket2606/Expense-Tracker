@@ -50,7 +50,7 @@ function App() {
 
 const AppStyled = styled.div`
    height: 100vh;
-   background-color: #FEE7E4;
+   background-color: rgb(242,242,242);
    position: relative;
 
    @media (max-width: 1100px){
@@ -61,10 +61,10 @@ const AppStyled = styled.div`
    }
   main{
     flex: 1;
-    background: #FC8778;
-    border: 4px solid black;
+    background: rgb(242,242,242);
+ 
     backdrop-filter: blur(4.5px);
-    border-radius: 32px;
+    
     overflow-x: hidden;
     &::-webkit-scrollbar{  
       width: 0;

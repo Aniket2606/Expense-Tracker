@@ -2,56 +2,58 @@ import React from 'react'
 import styled from 'styled-components';
 import avatar from '../img/avatar.png'
 import { menuItems } from '../utils/menuItems'
-import LogoSection from './LogoSection';
 
-export default function Navigation({active, setActive}) {
-  return ( 
-     <>
-     <LogoSection />
-     <NavStyled>
-          <div className="user-con">
-              <img src={avatar} alt="" />
-              <div className="text">
-                  <h2>Aniket</h2>
-                  <p>Student</p>
-              </div>
-          </div>
-          <ul className="menu-items">
-              {menuItems.map((item) => {
-                  return <li
-                      key={item.id}
-                      onClick={() => setActive(item.id)}
-                    // active class for selected option
-                      className={active === item.id ? 'active' : ''}
-                  >
-                      <span className="icon"> {item.icon}</span>
-                      <span className="item">{item.title}</span>
 
-                  </li>;
-              })}
+export default function Navigation({ active, setActive }) {
+    return (
+        <>
+            <NavStyled>
+                <div className="user-con">
+                    <img src={avatar} alt="" />
+                    <div className="text">
+                        <h2>Aniket</h2>
+                        <p>Student</p>
+                    </div>
+                </div>
+                <ul className="menu-items">
+                    {menuItems.map((item) => {
+                        return <li
+                            key={item.id}
+                            onClick={() => setActive(item.id)}
+                            // active class for selected option
+                            className={active === item.id ? 'active' : ''}
+                        >
+                            <span className="icon"> {item.icon}</span>
+                            <span className="item">{item.title}</span>
 
-          </ul>
-          {/* <div className="bottom-nav">
+                        </li>;
+                    })}
+
+                </ul>
+                {/* <div className="bottom-nav">
               <li onClick={() => alert("Not Available!")}>
                   {signout}
                   <span> &nbsp; Sign out</span>
               </li>
           </div> */}
 
-      </NavStyled></>
-  )
+            </NavStyled></>
+    )
 }
 
 const NavStyled = styled.nav`
-    margin-top: 7%;
     padding: 1rem 1.5rem;      
-    width: 25%;
-    height: 85%;
-    background:#FDAFA5;
-    border: 4px solid black;
-    backdrop-filter: blur(4.5px);
-    border-radius: 32px;
+    width: 20%;
+    color: white;
+   
+    // Gradient Color
+    background: hsla(239, 94%, 14%, 1);
+    background: linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(239, 94%, 14%, 1) 0%, hsla(190, 68%, 50%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#020344", endColorstr="#28b8d5", GradientType=1 );    backdrop-filter: blur(4.5px);
     display: flex;
+
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
@@ -98,7 +100,7 @@ const NavStyled = styled.nav`
         }
        
         p{
-            color: rgba(34, 34, 96, .8) ; 
+            color: rgb(220,220,220) ; 
         }
     }
 
@@ -113,7 +115,6 @@ const NavStyled = styled.nav`
         flex: 1;
         display: flex;
         flex-direction: column;
-        width: 75%;
         @media (max-width: 1100px){ 
             padding: 0 1rem 0 .5rem;
             flex-direction: row;
