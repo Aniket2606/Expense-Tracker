@@ -62,7 +62,7 @@ const NavStyled = styled.nav`
         margin-top: 0;
         margin-bottom: 1.5rem;
         height: 5rem;
-        width: 85%;
+        width: 100%;
         
     }
 
@@ -77,12 +77,8 @@ const NavStyled = styled.nav`
             width: 10rem;
             position: absolute;
             top: 1.2rem;
-            right: -1rem;
             
-            h2{
-                font-size: 1.6rem; 
-            }
-            img, p{
+            img, p, h2{
                 display: none;
             }
 
@@ -115,11 +111,12 @@ const NavStyled = styled.nav`
         flex: 1;
         display: flex;
         flex-direction: column;
+
         @media (max-width: 1100px){ 
             padding: 0 1rem 0 .5rem;
             flex-direction: row;
             justify-content: space-between;
-
+            
           .item{
             display: none;
           }

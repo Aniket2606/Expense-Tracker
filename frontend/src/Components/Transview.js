@@ -48,16 +48,14 @@ function Transview() {
 
 const HistoryStyled = styled.div`
     @media (max-width: 1100px){
-        gap: 2.5rem;
+        gap: 2rem;
         h1{
-            color: white;
+            font-size: 3rem;
             text-align: center;
-           
-            margin: .6rem 0;;
         }
        .history-item{
         p{
-            
+            font-size: 1.1rem;
         }
        }
 

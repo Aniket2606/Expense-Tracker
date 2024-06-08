@@ -40,7 +40,7 @@ function Dashboard() {
                                 </p>
                             </div>
                             <div className="balance bal">
-                                <h1>Total Balance</h1>
+                                <h2>Total Balance</h2>
                                 <p>
                                     {rupee} {totalBalance()}
                                 </p>
@@ -80,7 +80,6 @@ function Dashboard() {
 const DashboardStyled = styled.div`
     @media (max-width: 1100px){
     h1{
-        color: white;
         text-align: center;
         font-size: 3rem;
     }
@@ -94,6 +93,7 @@ const DashboardStyled = styled.div`
         @media (max-width: 1100px){
         grid-template-columns: repeat(2, 1fr) ;
         padding: 0rem 1.5rem;
+        
         .chart-con{
             
             .graph{
@@ -102,24 +102,24 @@ const DashboardStyled = styled.div`
             }
 
             .amount-con{
+           
+             h2{
+                    font-size: 1.7rem;
+                    text-align: center;
+                }
+             p{
+                font-size: 1.5rem;
+                font-weight: bold;
+             }
                .income, .expense{
                    text-align: center;
-                   margin: 0 1.5rem !important;
-                h2{
-                    font-size: 25rem;
-                    text-align: center;
-                }}
+                   width: 100%;
+             
+               }
+               .balance{
+                 
+               }
 
-                .balance{
-                    margin-top: 1rem;
-                    height: 95% !important;
-
-                    @media (max-width: 700px){
-                        p{
-                            font-size: 4.1rem !important;
-                        }
-                    }
-            }
         }
       }
     }
@@ -133,6 +133,10 @@ const DashboardStyled = styled.div`
                 grid-template-columns: repeat(4, 1fr);
                 gap: 0.5rem 2rem;
                 margin-top: 2rem;
+                p{
+                font-weight: bold;
+                font-size: 1.6rem;
+                }
                 .income, .expense{
                     grid-column: span 2;
                 }
@@ -159,7 +163,7 @@ const DashboardStyled = styled.div`
                     align-items: center;
                 }
                  .bal{
-                    margin-top: 5%;
+                    margin-top: 3%;
                  }
             }
         }
@@ -168,14 +172,16 @@ const DashboardStyled = styled.div`
 
             @media (max-width: 1100px){
              grid-column: 1/4;
-             margin-top: 36rem;
-
+             margin-top: 14rem;
+             
             .salary-title{
-                margin-top: 5rem !important;
+            font-size: 1.6rem;
+                margin-top: 4rem !important;
             }
             .salary-item {
-             
-            
+               p{
+               font-size: 1rem;
+               }
             }
 
             }
@@ -189,8 +195,13 @@ const DashboardStyled = styled.div`
                 justify-content: space-between;
             }
             .salary-title{
+                color: grey;
+                font-weight: normal;
+
+                span{
+                font-weight: bold;
                 color: black;
-                
+                }
                 
             }
             .salary-item{

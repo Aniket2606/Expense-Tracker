@@ -42,9 +42,11 @@ const HistoryStyled = styled.div`
 @media (max-width: 1100px){
     
     h2{
-        padding-left: 15rem;
+        padding-left: 14rem;
+        font-size: 1.6rem;
     }
     p{
+       font-size: 1rem;
        }
     }
      

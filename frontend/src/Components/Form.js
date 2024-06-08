@@ -101,6 +101,13 @@ export default function Form() {
 }
 
 const FormStyled = styled.form`
+
+@media (max-width: 1100px){
+  .input-control{
+   font-size: 1.1rem;
+  }
+   
+}
      display: flex;
      flex-direction: column;
      gap: 2rem;

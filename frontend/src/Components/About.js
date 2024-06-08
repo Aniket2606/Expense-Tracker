@@ -20,7 +20,7 @@ function About() {
 
                   <div className="description">
                     <p>FinTrackr is an expense tracker that helps you to manage your personal finances with ease. 
-                    Imagine it as a digital financial notebook i which you can track all your income and expenses. 
+                    Imagine it as a digital financial notebook in which you can track all your income and expenses. 
                     It tracks your income and expenses by chart so that you can see your budget quickly and make suitable financial decisions accordingly.</p>
 
 
@@ -49,42 +49,42 @@ const AboutStyled = styled.div`
          text-align: center;
       }
      .brand{
-      margin: 5rem 3rem;
+         margin: 2rem 1rem;
 
       img{
-        height: 22rem !important;
-        width: 22rem !important;
+        height: 14rem !important;
+        width: 14rem !important;
       }
      }
       .title{
         padding-top: 2rem;
         h1{
-          font-size: 6rem !important;
+          font-size: 3.8rem !important;
         }
           p{
-            font-size: 2rem !important ;
+            font-size: 1.4rem !important ;
           }
         }
       
       .description{
         padding-top: 6% !important;
-        font-size: 2.2rem !important;
+        font-size: .9rem !important;
       }
   
       .contact{
         h1{
-          margin-top: 8rem;
-          font-size: 3.2rem !important;
+          margin-top: 2rem;
+          font-size: 1.8rem !important;
         }
           p,i{
             padding-top: 1.5% !important;
-            font-size: 2.3rem !important;
+            font-size: .8rem !important;
           }
         }
 
         footer{
-          padding-top: 4rem !important;
-          font-size: 2rem !important;
+          padding-top: 2rem !important;
+          font-size: .6rem !important;
         }
       }
     
@@ -96,39 +96,39 @@ const AboutStyled = styled.div`
       padding: 1% 2%;
       text-align: center;
       img{
-        height: 20%;
-        width: 20%
+        height: 18%;
+        width: 18%
       }
       .title{
         h1{
-          font-size: 4.6rem;
+          font-size: 4rem;
         } 
           p{
-            font-size: 1.7rem;
+            font-size: 1.5rem;
           }
         } 
       }
       .description{
         text-align: justify;
         padding-top: 2% ;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
       .contact{
-        padding-top: 2.5%;
+        padding-top: 5%;
         ${'' /* text-align: justify; */}
         h1{
-          -webkit-text-stroke: .5px black;
+          -webkit-text-stroke: .8px black;
           color:white;
         }
         p,i{
           padding: .2% .1%;
-          font-size:1.6rem;
+          font-size:1.3rem;
         }
       }
       footer{
-        padding-top: 6%;
-        color: white;
-        font-size: 1.3rem;
+        padding-top: 1%;
+        color: grey;
+        font-size: 1rem;
       }
     }
 `;

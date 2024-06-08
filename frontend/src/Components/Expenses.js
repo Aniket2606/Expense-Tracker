@@ -48,17 +48,19 @@ function Expenses() {
 const ExpenseStyled = styled.div`
 @media (max-width: 1100px){
    h1{
-    color:white;
     text-align:center;
     font-size: 3.4rem;
    }
-
+   .form-container{
+     margin: 0rem 3rem !important;
+  }
    .total-income{
     margin: 2rem 0 !important;
-     height: 8rem;
-     font-size: 3rem !important;
+     height: 5rem;
+     font-size: 2rem !important;
+
     span{
-        font-size: 3rem !important;
+        font-size: 2rem !important;
     }
    }
 
@@ -68,7 +70,7 @@ const ExpenseStyled = styled.div`
         margin: 2rem 8rem;
        }
        .incomes{
-        margin: 2rem 3rem;
+        margin: 2rem 2rem;
        }
 
   }

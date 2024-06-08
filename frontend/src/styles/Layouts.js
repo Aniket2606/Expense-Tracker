@@ -8,6 +8,7 @@ export const MainLayout = styled.div`
 
     @media (max-width: 1100px) {
         display: block
+        
     }
 `;
 
