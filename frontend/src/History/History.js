@@ -40,10 +40,10 @@ function History() {
 
 const HistoryStyled = styled.div`
 @media (max-width: 1100px){
-    
+
     h2{
-        padding-left: 14rem;
         font-size: 1.6rem;
+        margin: 0 auto !important;
     }
     p{
        font-size: 1rem;

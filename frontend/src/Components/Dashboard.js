@@ -172,7 +172,7 @@ const DashboardStyled = styled.div`
 
             @media (max-width: 1100px){
              grid-column: 1/4;
-             margin-top: 14rem;
+             margin-top: 24rem;
              
             .salary-title{
             font-size: 1.6rem;
